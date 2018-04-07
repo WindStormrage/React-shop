@@ -1,19 +1,33 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {Link} from 'react-router-dom'
 import '../assets/css/App.css';
+import {connect} from 'react-redux'
 
-class App extends Component {
-	render() {
-		return (
-			<div className="App">
-				<p className="App-intro">
-					<li><Link to='/test'>to test</Link></li>
-					this is test2
-					<li><Link to='/'>to app</Link></li>
-				</p>
-			</div>
-		);
-	}
+
+import PropTypes from 'prop-types'
+
+const Test2 = ({data}) => {
+
+	return (
+		<div className="App">
+			<p className="App-intro">
+				<li><Link to='/test'>to test</Link></li>
+				this is test2------<span>{JSON.stringify(data)}</span>
+				<li><Link to='/'>to app</Link></li>
+			</p>
+		</div>
+	);
 }
 
-export default App;
+
+Test2.propTypes = {
+	data: PropTypes.object.isRequired
+}
+
+const mapStateToProps = state => ({
+	data: state
+})
+
+
+
+export default connect(mapStateToProps)(Test2)
