@@ -1,6 +1,6 @@
 import React from 'react';
-import test2 from './pages/Test2.js'
-import test from './pages/Test.js'
+import test2 from './constants/Test2.js'
+import test from './constants/Test.js'
 import {Switch,Route} from 'react-router-dom'
 
 
