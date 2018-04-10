@@ -52,6 +52,7 @@
     "test": "node scripts/test.js --env=jsdom"
   },
   "devDependencies": {
+    "amazeui-touch": "^2.0.0-alpha.1",
     "node-sass": "^4.8.3",
     "sass-loader": "^6.0.7",
     "webpack": "^4.5.0"
